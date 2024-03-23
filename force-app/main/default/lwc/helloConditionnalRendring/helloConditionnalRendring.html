@@ -1,0 +1,29 @@
+<template>
+
+    <lightning-card title="Conditional Rendring">
+
+        <div class="slds-var-m-around_medium">
+             <!-- Brand variant: Identifies the primary action in a group of buttons -->
+            <lightning-button variant="brand" 
+                              label={getLabel}
+                              title={getLabel}
+                              onclick={handleClick} 
+                              class="slds-m-left_x-small">
+            </lightning-button>
+            
+            <template if:true={isVisible}>
+                <div class="slds-var-m-around_medium">
+                    Welcome To Zero To Hero Serie
+                </div>
+            </template>
+            <template if:false={isVisible}>
+                <div class="slds-var-m-around_medium">
+                    You Can't See The Data , Click On The Button To See Data
+                </div>
+            </template>
+
+        </div>
+
+    </lightning-card>
+    
+</template>
